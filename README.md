@@ -16,3 +16,4 @@
 #### Link: https://ayushsinghal23.github.io/A-Blogging-website-for-technical-and-mechanical-enthusiasts/header-background/header-background.html
 ### Sample Responsive Specs Page
 #### Link: https://ayushsinghal23.github.io/A-Blogging-website-for-technical-and-mechanical-enthusiasts/Galaxy-M31s/Galaxy-M31s.html
+Note:-The two HTML.rar files are specs page files for android and ios devices.
