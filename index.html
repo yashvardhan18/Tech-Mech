@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="header-background\header-background.css" />
+    <link rel="stylesheet" href="card\card.css" />
+    <link rel="stylesheet" href="social icons\social icons.css" />
+    <link rel="stylesheet" href="grid\grid.css" />
+    <link rel="stylesheet" href="navbar\navbar.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <title>TechAndMech</title>
+    <link
+      rel="icon"
+      href="navbar\website logo-without-bg.png"
+      type="image/icon type"
+    />
+    <style>
+      #search-bar {
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+      }
+
+      a {
+        /* font-size: 10px!important; */
+        text-decoration: none;
+        /* color: black!important; */
+      }
+
+      #queryinput {
+        width: 100%;
+        height: 40px;
+        align-items: center;
+      }
+
+      #queries {
+        visibility: hidden;
+        width: 100%;
+        max-height: 250px;
+        overflow-y: scroll;
+        list-style-type: none;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        z-index: 0;
+        background: white;
+      }
+
+      #queries > li {
+        display: block;
+        width: 100%;
+        text-transform: capitalize;
+        margin: 0;
+        padding: 0;
+      }
+
+      #queries > li a {
+        font-size: 15px;
+        color: black;
+      }
+
+      #queries > li:hover {
+        background: rgb(204, 195, 195);
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+      /* Handle */
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(172, 207, 203);
+      }
+      /* Handle on hover */
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--================================ Logo header==================================  -->
+
+    <!--------------------------------- background of header---------------------------- -->
+    <!-- ------------------------------and logo image------------------------------------- -->
+    <section id="header-background"></section>
+    <img src="navbar\website logo-without-bg.png" alt="logo" class="logo" />
+    <!-- ============================================================================== -->
+    <!-- =========================social icons for header============================== -->
+    <!-- ============================================================================== -->
+    <nav id="logo-header"></nav>
+    <!--=================================== End Of logo header========================= -->
+
+    <!--$$$$$$$$$$$$$$$$$ ====== Start of main navbar ====== $$$$$$$$$$$$$$$$$$$$$ -->
+    <nav id="main-navbar">
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="choice-menu.html">MOBILES</a></li>
+        <!-- <li><a href="#">CARS</a></li>
+        <li><a href="#">LAPTOPS</a></li> -->
+        <li>
+          <div id="search-bar">
+            <input
+              type="text"
+              id="queryinput"
+              placeholder="search phone here..."
+              onfocus=""
+              onkeyup="searchQuery()"
+              onfocusout="setTimeout(vanishPanel, 150);"
+              style="
+                font-size: 15px;
+                background: rgb(206, 204, 204);
+                margin-top: 8px;
+              "
+            />
+            <ol id="queries">
+              <!-- Oppo Phones -->
+              <li>
+                <a href="./specspage/android/HTML/oppo-find-x2.html">
+                  Oppo Find X2 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oppo-reno-2f.html">
+                  Oppo Reno 2F
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oppo-reno-3-pro.html">
+                  Oppo Reno 3 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oppo-reno-4-pro.html">
+                  Oppo Reno 4 Pro
+                </a>
+              </li>
+
+              <!-- Samsung Phones -->
+              <li>
+                <a href="./specspage/android/HTML/samsung-s20-fe.html">
+                  Samsung Galaxy S20 FE
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/samsung-m51.html">
+                  Samsung Galaxy M51
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/samsung-m31s.html">
+                  Samsung Galaxy M31s
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/samsung-a31.html">
+                  Samsung Galaxy A31
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/samsung-a21s.html">
+                  Samsung Galaxy A21s
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/samsung-f41.html">
+                  Samsung Galaxy F41
+                </a>
+              </li>
+
+              <!-- Google -->
+              <li>
+                <a href="./specspage/android/HTML/google-pixel-4a.html">
+                  Google Pixel 4A
+                </a>
+              </li>
+              <!-- Lg -->
+              <li>
+                <a href="./specspage/android/HTML/lg-g8x.html">LG G8X</a>
+              </li>
+              <!-- moto -->
+              <li>
+                <a href="./specspage/android/HTML/moto-edge+.html">
+                  Moto Edge Plus
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/moto-one-fusion+.html">
+                  Moto One Fusion Plus
+                </a>
+              </li>
+
+              <!-- OnePlus Phones -->
+              <li>
+                <a href="./specspage/android/HTML/oneplus-7-pro.html">
+                  OnePlus 7 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-7t.html">
+                  OnePlus 7T
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-7T-pro.html">
+                  OnePlus 7T Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-8.html">OnePlus 8</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-8-pro.html">
+                  OnePlus 8 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-8t.html">
+                  OnePlus 8T
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/oneplus-nord.html">
+                  OnePlus Nord
+                </a>
+              </li>
+
+              <!-- Xiaomi Phones -->
+              <li>
+                <a href="./specspage/android/HTML/mi-10.html">Xiaomi MI 10</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-note-9.html">
+                  Xiaomi Redmi Note 9
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-note-9-Pro.html">
+                  Xiaomi Redmi Note 9 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-9.html">
+                  Xiaomi Redmi 9
+                </a>
+              </li>
+              <!-- <li><a href="#">Xiaomi Redmi Note 9 Pro Max</a></li> -->
+              <li>
+                <a href="./specspage/android/HTML/redmi-9-prime.html">
+                  Xiaomi Redmi 9 Prime
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-9a.html">
+                  Xiaomi Redmi 9A
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-8a.html">
+                  Xiaomi Redmi 8A
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-k20-pro.html">
+                  Redmi K20 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/redmi-k20.html">Redmi K20</a>
+              </li>
+
+              <!-- Realme Phones -->
+              <li>
+                <a href="./specspage/android/HTML/realme-7.html">Realme 7</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-7i.html">Realme 7i</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-7-pro.html">
+                  Realme 7 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-narzo-10.html">
+                  Realme Narzo 10
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-narzo-10a.html">
+                  Realme Narzo 10A
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-narzo-20.html">
+                  Realme Narzo 20
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-narzo-20a.html">
+                  Realme Narzo 20A
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-narzo-20-pro.html">
+                  Realme Narzo 20 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-x3-superzoom.html">
+                  Realme X3 Superzoom
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/realme-x50-pro.html">
+                  Realme X50 Pro
+                </a>
+              </li>
+
+              <!-- Vivo Phones -->
+              <li>
+                <a href="./specspage/android/HTML/vivo-v20.html">Vivo V20</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/vivo-x50-pro.html">
+                  Vivo X50 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/vivo-z1-pro.html">
+                  Vivo Z1 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/vivo-v17.html">Vivo V17</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/vivo-y50.html">Vivo Y50</a>
+              </li>
+              <!--asus Phones -->
+              <li>
+                <a href="./specspage/android/HTML/asus-rog-2.html">
+                  Asus Rog 2
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/asus-rog-3.html">
+                  Asus Rog 3
+                </a>
+              </li>
+              <!--nokia Phones -->
+              <li>
+                <a href="./specspage/android/HTML/nokia-5.3.html">Nokia 5.3</a>
+              </li>
+              <!--infinix Phones -->
+              <li>
+                <a href="./specspage/android/HTML/infinix-hot-7.html">
+                  Infinix Hot 7
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/infinix-hot-9.html">
+                  Infinix Hot 9
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/infinix-hot-9-pro.html">
+                  Infinix Hot 9 pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/infinix-hot-10.html">
+                  Infinix Hot 10
+                </a>
+              </li>
+              <!--micromax Phones -->
+              <li>
+                <a href="./specspage/android/HTML/micromax-in-note-1.html">
+                  Micromax In Note 1
+                </a>
+              </li>
+              <!--iqoo Phones -->
+              <li>
+                <a href="./specspage/android/HTML/iqoo-3.html">Iqoo 3</a>
+              </li>
+              <!--honor Phones -->
+              <li>
+                <a href="./specspage/android/HTML/honor-9a.html">Honor 9A</a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/honor-9x.html">Honor 9X</a>
+              </li>
+              <!--tecno Phones -->
+              <li>
+                <a href="./specspage/android/HTML/tecno-spark-5-pro.html">
+                  Tecno Spark 5 Pro
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/android/HTML/tecno-spark-6.html">
+                  Tecno Spark 6
+                </a>
+              </li>
+              <!-- Apple Phones -->
+              <!-- <li><a href="#">Apple Iphone 12 Mini</a></li> -->
+              <li>
+                <a href="./specspage/ios/HTML/iphone-12.html">
+                  Apple Iphone 12
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/ios/HTML/iPhone-12-Pro.html">
+                  Apple Iphone 12 Pro
+                </a>
+              </li>
+              <!-- <li><a href="#">Apple Iphone 12 Pro Max</a></li> -->
+              <li>
+                <a href="./specspage/ios/HTML/iPhone-11.html">
+                  Apple Iphone 11
+                </a>
+              </li>
+              <!-- <li><a href="#">Apple Iphone 11 Pro</a></li> -->
+              <!-- <li><a href="#">Apple Iphone 11 Pro Max</a></li> -->
+              <li>
+                <a href="./specspage/ios/HTML/iPhone-se.html">
+                  Apple Iphone SE
+                </a>
+              </li>
+              <li>
+                <a href="./specspage/ios/HTML/iPhone-xr.html">
+                  Apple Iphone XR
+                </a>
+              </li>
+            </ol>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!--$$$$$$$$$$$$$$$$$ ====== End of main navbar ====== $$$$$$$$$$$$$$$$$$$$$ -->
+
+    <!--$$$$$$$$$$$$$$$$$=====grid section start====$$$$$$$$$$$$$$$$$ -->
+    <section id="grid">
+      <div class="grid-container">
+        <div class="box a">
+          <a href="newsPages/rollable phone.html">
+            <img src="images/news/Capture.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box b">
+          <a href="newsPages/apple m1.html">
+            <img src="images/news/APPLE M1.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box c">
+          <a href="newsPages/ps5 patent.html">
+            <img src="images/news/PS5.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box d">
+          <a href="newsPages/vivo origin os.html">
+            <img src="images/news/VIVO OS.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box e">
+          <a href="newsPages/Apple fine.html">
+            <img src="images/news/APPLE BATTERYGATE.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box f">
+          <a href="newsPages/samsung s21.html">
+            <img src="images/news/S21.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box g">
+          <a href="newsPages/exynos 1080.html">
+            <img src="images/news/EXYNOS 1080.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box h">
+          <a href="newsPages/realme x7.html">
+            <img src="images/news/REALME X7.JPG" alt="" />
+          </a>
+        </div>
+        <div class="box i">
+          <a href="newsPages/apple rollable.html">
+            <img src="images/news/APPLE FOLDABLE.JPG" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--$$$$$$$$$$$$$$$$$=====End of grid section start====$$$$$$$$$$$$$$$$$ -->
+
+    <!--$$$$$$$$$$$$$$$$$===== Card section start ====$$$$$$$$$$$$$$$$$ -->
+    <section id="tech-cards">
+      <h1>Tech</h1>
+      <div class="container">
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <h1>ANDROID</h1>
+              <a href="sorting-by-OS.html#androids">Explore</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="box">
+            <div class="content">
+              <h1>IOS</h1>
+              <a href="sorting-by-OS.html#iphones">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price-view">
+        <h1 id="view-by-price">VIEW BY PRICE</h1>
+        <div class="price-container">
+          <div class="catergory">
+            <a href="sorting-by-price.html#above-5k">
+              <h2>5000-10000</h2>
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="sorting-by-price.html#above-10k">
+              <h2>10000-15000</h2>
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="sorting-by-price.html#above-15k">
+              <h2>15000-20000</h2>
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="sorting-by-price.html#above-20k">
+              <h2>20000-30000</h2>
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="sorting-by-price.html#above-30k">
+              <h2>30000-40000</h2>
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="sorting-by-price.html#">
+              <h2>above 40000</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="category-view">
+        <h1 id="view-by-category">VIEW BY CATEGORY</h1>
+        <div class="category-container">
+          <a href="sorting-by-category.html#">
+            <img src="img\flagship.jpg" alt="" />
+            <h2>FLAGSHIPS</h2>
+          </a>
+          <a href="sorting-by-category.html#mid-rangers">
+            <img src="img\midrange.jpg" alt="" />
+            <h2>MID-RANGE</h2>
+          </a>
+          <a href="sorting-by-category.html#budget">
+            <img src="img\budget.jpg" alt="" />
+            <h2>BUDGET</h2>
+          </a>
+        </div>
+      </div>
+      <div class="brand-view">
+        <h1 id="view-by-brand">VIEW BY BRAND</h1>
+        <div class="brand-container">
+          <div class="catergory">
+            <a href="choice-menu.html#apple">
+              <img src="img/logos/apple.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#google">
+              <img src="img/logos/google.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#samsung">
+              <img src="img/logos/samsung.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#oneplus">
+              <img src="img/logos/oneplus.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#mi">
+              <img src="img/logos/mi.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#realme">
+              <img src="img/logos/realme.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#nokia">
+              <img src="img/logos/nokia.png" alt="" style="padding: 20px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#iqoo">
+              <img src="img/logos/iqoo.png" alt="" style="padding: 20px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#asus">
+              <img src="img/logos/asus.png" alt="" style="padding: 20px" />
+            </a>
+          </div>
+          <!-- <div class="catergory">
+            <a href="#">
+              <img src="img/logos/sony.png" alt="" style="padding: 20px" />
+            </a>
+          </div> -->
+          <div class="catergory">
+            <a href="choice-menu.html#lg">
+              <img src="img/logos/lg.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#micromax">
+              <img src="img/logos/micromax.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#moto">
+              <img src="img/logos/motorola.png" alt="" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#poco">
+              <img
+                src="img/logos/poco-logo.png"
+                alt="poco"
+                style="padding: 20px"
+              />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#oppo">
+              <img src="img/logos/oppo.png" alt="" style="padding: 22px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#vivo">
+              <img src="img/logos/vivo.png" alt="" style="padding: 22px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#honor">
+              <img src="img/logos/honor.png" alt="" style="padding: 22px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#infinix">
+              <img src="img/logos/infinix.png" alt="" style="padding: 22px" />
+            </a>
+          </div>
+          <div class="catergory">
+            <a href="choice-menu.html#tecno">
+              <img src="img/logos/tecno.png" alt="" style="padding: 20px" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--$$$$$$$$$$$$$$$$$=====End of Card section====$$$$$$$$$$$$$$$$$ -->
+
+    <!--$$$$$$$$$$$$$$$$$=====start of social icons section====$$$$$$$$$$$$$$$$$ -->
+
+    <section id="social-icons-main">
+      <div class="icons">
+        <li class="first">
+          <a href="#"><i class="fa fa-facebook-f" aria-hidden="true"></i></a>
+        </li>
+        <li class="second">
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+        <li class="third">
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li class="fourth">
+          <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </li>
+        <li class="fifth">
+          <a href="# "><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        </li>
+      </div>
+      <h1>&copy;All rights reserved</h1>
+      <h1>Tech & Mech</h1>
+    </section>
+    <!--$$$$$$$$$$$$$$$$$=====end of social icons section====$$$$$$$$$$$$$$$$$ -->
+
+    <!-- header background script -->
+    <script src="header-background\header-background.js"></script>
+    <script src="navbar\navbar.js"></script>
+    <!-- ============================================================================ -->
+    <script>
+      const searchQuery = () => {
+        let filter = document
+          .getElementById("queryinput")
+          .value.toUpperCase()
+          .replace(/ /g, "")
+          .replace(/\b/g, "");
+
+        let ol = document.getElementById("queries");
+        let li = ol.getElementsByTagName("li");
+        for (var i = 0; i < li.length; i++) {
+          let a = li[i].getElementsByTagName("a")[0];
+          let textValue = a.textContent.toUpperCase().replace(/ /g, "");
+          if (textValue.indexOf(filter) >= 0 && filter.length != 0) {
+            document.getElementById("queries").style.visibility = "visible";
+            li[i].style.visibility = "visible";
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+            // document.getElementById('queries').style.visibility="hidden";
+          }
+        }
+      };
+
+      function vanishPanel() {
+        // document.getElementById('queries').style.visibility="hidden";
+        let lis = document.querySelectorAll("#queries>li");
+        var input = document.getElementById("queryinput");
+        input.value = "";
+        for (var i = 0; i < lis.length; i++) {
+          lis[i].style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

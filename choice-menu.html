@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en" class="notranslate" translate="no">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google" content="notranslate" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+      integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
+      crossorigin="anonymous"
+    />
+
+    <title>TechAndMech</title>
+    <link
+      rel="icon"
+      href="navbar\website logo-without-bg.png"
+      type="image/icon type"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+        scroll-behavior: smooth;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(148, 187, 233, 1);
+      }
+      /* Handle */
+
+      ::-webkit-scrollbar-thumb {
+        background: rgb(172, 207, 203);
+      }
+      /* Handle on hover */
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .carousel-inner {
+        position: relative;
+        top: 70px;
+      }
+
+      #showcase {
+        min-height: 100vh;
+        width: 100%;
+      }
+
+      #showcase .showcase-container .phone {
+        position: relative;
+        margin: 30px 10px;
+        min-width: 22%;
+      }
+
+      #showcase .showcase-container .phone .image {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 200px;
+        flex-direction: column;
+      }
+
+      #showcase .showcase-container .phone .text {
+        width: 180px;
+        height: 20%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.5rem;
+        margin-top: 10px;
+      }
+
+      #showcase .showcase-container .phone .text:hover {
+        background: crimson;
+        color: white;
+        font-size: 1.7rem;
+        transition: all 0.5s;
+      }
+
+      #showcase .showcase-container .phone .image > img {
+        width: 180px;
+        height: 230px;
+        object-fit: contain;
+      }
+      /*-------------===== side panel start====--------------------- */
+
+      .open {
+        left: 0px !important;
+        transition: left 0.5s;
+      }
+
+      .close {
+        left: -250px;
+        transition: left 0.5s;
+        opacity: 1;
+      }
+
+      .hide {
+        visibility: hidden;
+      }
+
+      #collapseview {
+        visibility: hidden;
+      }
+
+      #view,
+      #collapseview {
+        position: fixed;
+        top: 8px;
+        right: 20px;
+        z-index: 2;
+        width: 100px;
+        height: 50px;
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px rgb(68, 67, 67);
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        background-image: radial-gradient(
+          circle 465px at -15.1% -25%,
+          rgba(17, 130, 193, 1) 0%,
+          rgba(67, 166, 238, 1) 49%,
+          rgba(126, 203, 244, 1) 90.2%
+        );
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: white;
+        transition: all 0.5s;
+      }
+
+      #view:hover {
+        box-shadow: 3px 3px 5px rgb(58, 57, 57);
+        color: white;
+        background-image: linear-gradient(
+          112.2deg,
+          rgba(86, 223, 223, 1) 4.7%,
+          rgba(2, 28, 186, 1) 110.1%
+        );
+      }
+
+      #collapseview:hover {
+        box-shadow: 3px 3px 5px rgb(58, 57, 57);
+        color: white;
+        background-image: linear-gradient(
+          112.2deg,
+          rgba(86, 223, 223, 1) 4.7%,
+          rgba(2, 28, 186, 1) 110.1%
+        );
+      }
+
+      #side-bar-cum-panel {
+        position: fixed;
+        top: 100px;
+        z-index: 2;
+        display: flex;
+        width: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        left: -250px;
+      }
+
+      .carousel-indicators {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: #6db0e7;
+        height: fit-content;
+        width: fit-content;
+        margin: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .carousel-indicators li {
+        height: fit-content;
+        width: 100%;
+        display: inline;
+        background: none;
+        position: relative;
+        border-radius: none;
+        margin: 0px 0px 0px 20px;
+        margin: 0;
+        margin-left: 5px;
+        margin-right: 10px;
+      }
+
+      li > h1 {
+        text-indent: 0;
+        text-align: left;
+        position: relative;
+        text-transform: uppercase;
+        color: white;
+        font-size: 2em;
+        letter-spacing: 0.15rem;
+        text-align: center;
+        margin: 0px 10px 0px 0px;
+      }
+
+      .carousel-indicators div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      /* #panel-options {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: left;
+        height: fit-content;
+        width: 100px;
+        height: 250px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        background: #6db0e7;
+      }
+      #panel-options > h4 {
+        margin-left: 5px;
+        font-size: 2rem;
+      } */
+
+      /*-------------===== side panel end====--------------------- */
+      /* =====================$$$$$$$$$$$$$$$$$$$$=================== */
+      /*-------------===== Sort by category start====--------------------- */
+      .sorting-by-category h1 {
+        text-align: center;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 3.5rem;
+        width: fit-content;
+        border-bottom: 2px solid rgb(187, 184, 184);
+        margin-bottom: 10px;
+      }
+      .flagships,
+      .mid-rangers,
+      .budget {
+        display: flex;
+        background-color: rgb(248, 246, 245);
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /*-------------===== Sort by category end====--------------------- */
+      /* =====================$$$$$$$$$$$$$$$$$$$$=================== */
+      /*-------------===== Sort by price start====--------------------- */
+      #sorting-by-price h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 3.5rem;
+        border-bottom: 2px solid rgb(187, 184, 184);
+        margin-bottom: 10px;
+      }
+      .above-40k,
+      .above-30k,
+      .above-20k,
+      .above-15k,
+      .above-10k,
+      .above-5k {
+        width: 100%;
+        background-color: rgb(248, 246, 245);
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      /*-------------===== Sort by price end====--------------------- */
+      /* =====================$$$$$$$$$$$$$$$$$$$$=================== */
+      /*-------------===== Sort by OS end====--------------------- */
+      .sorting-by-OS h1 {
+        text-align: center;
+        width: fit-content;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 3.5rem;
+        /* background-color: blue; */
+        border-bottom: 2px solid rgb(187, 184, 184);
+        margin-bottom: 10px;
+      }
+      .androids,
+      .iphones {
+        display: flex;
+        background-color: rgb(248, 246, 245);
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      /*-------------===== Sort by OS end====--------------------- */
+      /* =====================$$$$$$$$$$$$$$$$$$$$=================== */
+      /*-------------===== Sort by Brand Start====--------------------- */
+      .sorting-by-brand {
+        width: 100%;
+        text-align: center;
+      }
+      .sorting-by-brand img {
+        width: 160px;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto;
+      }
+      .brand-start {
+        display: flex;
+        background-color: rgb(248, 246, 245);
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      /* this is a menu bar to choose between flagships,mid-rangers and budget phone */
+
+      .choose-from-options {
+        position: fixed;
+        top: 0px;
+        right: 0;
+        width: 100vw;
+        display: flex;
+
+        padding-right: 120px;
+        justify-content: flex-end;
+        align-items: center;
+        background: linear-gradient(
+          90deg,
+          rgba(142, 140, 141, 1) 35%,
+          rgba(148, 187, 233, 1) 100%
+        );
+        height: 70px;
+        z-index: 4;
+      }
+      .choose-from-options .adjust-options {
+        /* border:2px solid red;  */
+        width: 50%;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+      }
+      .choose-from-options .adjust-options > a {
+        font-size: 2.5rem;
+        color: white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .choose-from-options .adjust-options > a:hover {
+        color: darkcyan;
+        font-weight: 500;
+        transition: color 0.5s;
+      }
+      .logo {
+        position: fixed;
+        width: 150px;
+        height: 100px;
+        top: -15px;
+        left: 10px;
+        object-fit: contain;
+      }
+      /* more brands options of sort by brand catgory start */
+      .choose-from-options .adjust-options span {
+        height: 100%;
+      }
+      .choose-from-options .adjust-options span > a {
+        font-size: 2.5rem;
+        color: white;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* more brands options of sort by brand catgory end */
+      /* tech and ech logo start */
+
+      /* tech and mech logo end */
+
+      .navbar-brand-logo {
+        height: 60px;
+        width: 50px;
+        object-fit: contain;
+      }
+      /* mega menu start */
+      .mega-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 100px;
+        flex-wrap: wrap;
+        background: rgba(148, 187, 233, 1);
+        max-width: 60%;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
+      .mega-menu > li {
+        position: relative;
+        margin-top: 10px;
+        list-style: none;
+      }
+      .mega-menu > li:hover {
+        background: rgb(75, 124, 173);
+      }
+      .mega-menu li img {
+        width: 100px;
+        height: 50px;
+        object-fit: contain;
+        margin: 10px;
+      }
+      .choose-from-options .adjust-options span:hover > .mega-menu {
+        display: flex;
+        transition: all 2s !important;
+      }
+      .choose-from-options .adjust-options span:hover > .more-brands {
+        color: darkcyan;
+        transition: color 0.5s;
+        font-weight: 600;
+      }
+      /* mega menu end */
+      .price-menu {
+        display: none;
+        flex-direction: column;
+        background: rgba(148, 187, 233, 1);
+        width: 100%;
+
+        height: 150px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 5px;
+        list-style: none;
+      }
+      .price-menu li > a {
+        font-size: 1.8rem;
+        color: white;
+        margin: 5px;
+        margin-bottom: 10px !important;
+      }
+      .price-menu li > a:hover {
+        color: darkcyan;
+        font-weight: 500;
+        transition: color 0.5s;
+      }
+      .showmoreprice:hover > .price-menu {
+        display: flex;
+      }
+      .showmoreprice:hover > #moreprice {
+        color: darkcyan;
+        font-weight: 500;
+        transition: color 0.5s;
+      }
+      /* choose from options end */
+
+      @media (max-width: 1000px) and (min-width: 800px) {
+        #showcase .showcase-container .phone .image > img {
+          width: 160px;
+          height: 200px;
+        }
+        .choose-from-options .adjust-options {
+          width: 65%;
+        }
+      }
+
+      @media (max-width: 799px) and (min-width: 600px) {
+        #showcase .showcase-container .phone .image > img {
+          width: 140px;
+          height: 170px;
+        }
+        #showcase .showcase-container .phone .text {
+          width: 140px;
+        }
+        .choose-from-options .adjust-options {
+          width: 79%;
+        }
+        a.text {
+          font-size: 1.2rem !important;
+        }
+      }
+
+      @media (max-width: 750px) and (min-width: 0px) {
+        a.text {
+          font-size: 1.2rem !important;
+        }
+        #view,
+        #collapseview {
+          right: 100px;
+          height: 45px;
+          width: 70px;
+          top: 12px;
+        }
+        .choose-from-options .adjust-options {
+          flex-direction: column;
+          background: rgba(148, 187, 233, 1);
+          position: absolute;
+          top: 70px;
+          right: 0;
+          width: 0px;
+          height: fit-content;
+          transition: 0.7s ease-out;
+          border-bottom-left-radius: 10px;
+          /* pointer-events: none; */
+        }
+        .openhamburger {
+          width: 170px !important;
+        }
+        .choose-from-options .adjust-options > a {
+          opacity: 0;
+          font-size: 2rem;
+          margin: 15px 0px;
+        }
+        .shownavtext {
+          animation: text-reveal 0.3s 0.3s forwards;
+        }
+        .line {
+          width: 30px;
+          height: 3px;
+          background: white;
+          margin: 5px;
+        }
+        .hamburger {
+          position: fixed;
+          cursor: pointer;
+          right: 30px;
+          top: 40px;
+          transform: translate(-20%, -50%);
+          z-index: 111111111;
+          cursor: pointer;
+          /* background: azure; */
+        }
+        .logo {
+          left: -10px;
+        }
+        .choose-from-options .adjust-options span {
+          width: 100% !important;
+        }
+        .choose-from-options .adjust-options span > a {
+          font-size: 19px;
+          font-weight: 600;
+          display: block;
+          text-align: center;
+          width: 100%;
+        }
+        .more-brands {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          opacity: 0;
+        }
+        .mega-menu {
+          margin: 0;
+          height: 300px;
+          /* display: flex; */
+          min-width: 100% !important;
+          position: relative;
+          background: rgba(148, 187, 233, 1);
+          top: 0px;
+          right: 0px;
+          overflow-y: scroll;
+        }
+        .mega-menu li {
+          align-items: center;
+          justify-content: center;
+          /* width: 100%; */
+        }
+        .mega-menu > li:hover {
+          transform: scale(1.2);
+          transition: all 0.5s ease-out;
+        }
+        @keyframes navbarreveal {
+          from {
+            width: 0;
+          }
+          to {
+            width: 300px;
+          }
+        }
+        @keyframes text-reveal {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      }
+
+      @media (max-width: 599px) and (min-width: 400px) {
+        #showcase .showcase-container .phone .image > img {
+          width: 120px;
+          height: 150px;
+        }
+        #showcase .showcase-container .phone .text {
+          width: 120px;
+          font-size: 1.3rem;
+        }
+        #showcase .showcase-container .phone .text:hover {
+          color: red;
+          font-weight: 500;
+          font-size: 1.3rem;
+          transition: all 0.1s;
+          background: white;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- data-ride="carousel" -->
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide carousel-fade"
+      data-interval="false"
+    >
+      <button id="view" onclick="openview()">view by</button>
+      <button id="collapseview" onclick="closeview()">Close</button>
+      <div id="side-bar-cum-panel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0">
+            <h1>price</h1>
+          </li>
+
+          <li data-target="#carouselExampleIndicators" data-slide-to="1">
+            <h1>category</h1>
+          </li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2">
+            <h1>os</h1>
+          </li>
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="3"
+            class="active"
+          >
+            <h1>brand</h1>
+          </li>
+        </ol>
+      </div>
+      <div class="carousel-inner">
+        <!--sorting by price range start-->
+        <div class="carousel-item">
+          <section id="showcase">
+            <div class="showcase-container one">
+              <div class="choose-from-options">
+                <img
+                  src="navbar\website logo-without-bg.png"
+                  alt="logo"
+                  class="logo"
+                />
+                <div class="hamburger" onclick="openmenu()">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="adjust-options" id="optionofprice">
+                  <a
+                    href="index.html"
+                    id="pricehome"
+                    onclick="homeclicked('pricehome')"
+                  >
+                    HOME
+                  </a>
+                  <a href="#" id="40k" onclick="isclicked('40k')">&lt;40K</a>
+
+                  <a
+                    href="#above-30k"
+                    id="30k-40k"
+                    onclick="isclicked('30k-40k')"
+                  >
+                    30k-40K
+                  </a>
+                  <span class="showmoreprice">
+                    <a
+                      href="#"
+                      id="moreprice"
+                      style="pointer-events: none; cursor: default"
+                    >
+                      MORE
+                    </a>
+                    <ul class="price-menu">
+                      <li>
+                        <a
+                          href="#above-20k"
+                          id="20k-30k"
+                          onclick="isclicked('20k-30k')"
+                        >
+                          20K-30K
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#above-15k"
+                          id="15k-20k"
+                          onclick="isclicked('15k-20k')"
+                        >
+                          15K-20K
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#above-10k"
+                          id="10k-15k"
+                          onclick="isclicked('10k-15k')"
+                        >
+                          10K-15K
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="#above-5k"
+                          id="5k-10k"
+                          onclick="isclicked('5k-10k')"
+                        >
+                          5K-10K
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <!-- ---------------------------------------------------- -->
+              <!-- above 40000 start -->
+              <article id="sorting-by-price">
+                <h1 id="above-40k">ABOVE 40000</h1>
+                <div class="above-40k"></div>
+              </article>
+              <!-- above 40k end -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- 30k-40k start -->
+              <article id="sorting-by-price">
+                <h1 id="above-30k">30000-40000</h1>
+                <div class="above-30k"></div>
+              </article>
+              <!-- 30k-40k end -->
+              <!-- ---------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- 20k to 30k start-->
+              <article id="sorting-by-price">
+                <h1 id="above-20k">20000-30000</h1>
+                <div class="above-20k">
+                  <!--phones here  -->
+                </div>
+              </article>
+
+              <!-- 20k to 30k end-->
+              <!-- ---------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- 15k to 20k start-->
+              <article id="sorting-by-price">
+                <h1 id="above-15k">15000-20000</h1>
+                <div class="above-15k">
+                  <!--phones here  -->
+                </div>
+              </article>
+
+              <!-- 15k to 20k end-->
+              <!-- ---------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- 10k to 15k start-->
+              <article id="sorting-by-price">
+                <h1 id="above-10k">10000-15000</h1>
+                <div class="above-10k">
+                  <!--phones here  -->
+                </div>
+              </article>
+
+              <!-- 10k to 15k end-->
+              <!-- ---------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- 5k to 10k start-->
+              <article id="sorting-by-price">
+                <h1 id="above-5k">5000-10000</h1>
+                <div class="above-5k">
+                  <!--phones here  -->
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- 5k to 10k end-->
+        <!-- sorting by price range end  -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- sorting by category start -->
+        <div class="carousel-item">
+          <section id="showcase">
+            <div class="showcase-container">
+              <div class="choose-from-options">
+                <img
+                  src="navbar\website logo-without-bg.png"
+                  alt="logo"
+                  class="logo"
+                />
+                <div class="hamburger" onclick="openmenu()">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="adjust-options" id="optionofcategory">
+                  <a href="#" id="high" onclick="isclicked('high')">
+                    FLAGSHIPS
+                  </a>
+                  <a
+                    href="#mid-rangers"
+                    id="medium"
+                    onclick="isclicked('medium')"
+                  >
+                    MID-RANGERS
+                  </a>
+                  <a href="#budget" id="low" onclick="isclicked('low')">
+                    BUDGET
+                  </a>
+                  <a href="index.html" onclick="homeclicked()">HOME</a>
+                </div>
+              </div>
+              <!-- Flagships start -->
+              <article class="sorting-by-category" id="flagships">
+                <h1>FLAGSHIPS</h1>
+                <div class="flagships">
+                  <!-- phones here -->
+                </div>
+              </article>
+
+              <!-- Flagships end -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- mid rangers start -->
+              <article class="sorting-by-category" id="mid-rangers">
+                <h1>MID-RANGERS</h1>
+                <div class="mid-rangers">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!--mid rangers end -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <article class="sorting-by-category" id="budget">
+                <h1>BUDGET</h1>
+                <div class="budget">
+                  <!-- phones here -->
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+        <!-- sorting by  category end  -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- sorting by OS start -->
+        <div class="carousel-item">
+          <section id="showcase">
+            <div class="showcase-container">
+              <div class="choose-from-options">
+                <img
+                  src="navbar\website logo-without-bg.png"
+                  alt="logo"
+                  class="logo"
+                />
+                <div class="hamburger" onclick="openmenu()">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="adjust-options" id="optionofOS">
+                  <a href="#" id="and" onclick="isclicked('and')">ANDROID</a>
+                  <a href="#iphones" id="iph" onclick="isclicked('iph')">IOS</a>
+                  <a href="index.html" onclick="homeclicked()">HOME</a>
+                </div>
+              </div>
+              <!-- androids start here -->
+              <article class="sorting-by-OS" id="Android">
+                <h1>ANDROID</h1>
+                <div class="androids">
+                  <!-- phones here -->
+                </div>
+              </article>
+
+              <!-- androids end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--iphones start here  -->
+              <article class="sorting-by-OS" id="iphones">
+                <h1>IPHONES</h1>
+                <div class="iphones">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- Iphones end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+            </div>
+          </section>
+        </div>
+        <!-- sorting by  OS end  -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <div class="carousel-item active">
+          <section id="showcase">
+            <div class="showcase-container">
+              <div class="choose-from-options">
+                <img
+                  src="navbar\website logo-without-bg.png"
+                  alt="logo"
+                  class="logo"
+                />
+                <div class="hamburger" onclick="openmenu()">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                <div class="adjust-options" id="optionofbrand">
+                  <a href="index.html" onclick="homeclicked()">HOME</a>
+                  <a href="#samsung" id="sam" onclick="isclicked('sam')">
+                    <img
+                      src="img/logos/samsung.png"
+                      alt=""
+                      class="navbar-brand-logo"
+                      style="width: 120px"
+                    />
+                  </a>
+                  <a href="#apple" id="app" onclick="isclicked('app')">
+                    <img
+                      src="img/logos/apple.png"
+                      alt=""
+                      class="navbar-brand-logo"
+                    />
+                  </a>
+                  <span>
+                    <a href="#above-30000" class="more-brands">MORE BRANDS</a>
+                    <ul class="mega-menu">
+                      <li>
+                        <a href="#mi" id="xiao" onclick="isclicked('xiao')">
+                          <img src="img/logos/mi.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#google" id="goo" onclick="isclicked('goo')">
+                          <img src="img/logos/google.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#moto" id="mot" onclick="isclicked('mot')">
+                          <img src="img/logos/motorola.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#oneplus" id="one" onclick="isclicked('one')">
+                          <img src="img/logos/oneplus.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#realme" id="rea" onclick="isclicked('rea')">
+                          <img src="img/logos/realme.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#asus" id="asu" onclick="isclicked('asu')">
+                          <img src="img/logos/asus.png" alt="" />
+                        </a>
+                      </li>
+                      <!-- <li>
+                        <a href="#sony">
+                          <img src="img/logos/sony.png" alt="" />
+                        </a>
+                      </li> -->
+                      <li>
+                        <a href="#lg" id="l" onclick="isclicked('l')">
+                          <img src="img/logos/lg.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#poco" id="poc" onclick="isclicked('poc')">
+                          <img src="img/logos/poco-logo.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#tecno" id="tec" onclick="isclicked('tec')">
+                          <img src="img/logos/tecno.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#nokia" id="nok" onclick="isclicked('nok')">
+                          <img src="img/logos/nokia.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#micromax" id="mic" onclick="isclicked('mic')">
+                          <img src="img/logos/micromax.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#oppo" id="opp" onclick="isclicked('opp')">
+                          <img src="img/logos/oppo.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#vivo" id="viv" onclick="isclicked('viv')">
+                          <img src="img/logos/vivo.png" alt="" />
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="#iqoo" id="iqo" onclick="isclicked('iqo')">
+                          <img src="img/logos/iqoo.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#infinix" id="inf" onclick="isclicked('inf')">
+                          <img src="img/logos/infinix.png" alt="" />
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#honor" id="hon" onclick="isclicked('hon')">
+                          <img src="img/logos/honor.png" alt="" />
+                        </a>
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </div>
+              <!-- apple start here -->
+              <article class="sorting-by-brand" id="apple">
+                <img src="img/logos/apple.png" alt="" />
+                <div class="brand-start apple">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- apple end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- samsung start here -->
+              <article class="sorting-by-brand" id="samsung">
+                <img src="img/logos/samsung.png" alt="" />
+                <div class="brand-start samsung">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- samsung end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--oneplus start here  -->
+              <article class="sorting-by-brand" id="oneplus">
+                <img src="img/logos/oneplus.png" alt="" />
+                <div class="brand-start oneplus">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- oneplus end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--MI start here  -->
+              <article class="sorting-by-brand" id="mi">
+                <img src="img/logos/mi.png" alt="" />
+                <div class="brand-start mi">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- MI end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--asus start here  -->
+              <article class="sorting-by-brand" id="asus">
+                <img src="img/logos/asus.png" alt="" />
+                <div class="brand-start asus">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- asus end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- realme start here -->
+              <article class="sorting-by-brand" id="realme">
+                <img src="img/logos/realme.png" alt="" />
+                <div class="brand-start realme">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- realme end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--nokia start here  -->
+              <article class="sorting-by-brand" id="nokia">
+                <img src="img/logos/nokia.png" alt="" />
+                <div class="brand-start nokia">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- nokia end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--vivo start here  -->
+              <article class="sorting-by-brand" id="vivo">
+                <img src="img/logos/vivo.png" alt="" />
+                <div class="brand-start vivo">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!--vivo end here  -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--oppo start here  -->
+              <article class="sorting-by-brand" id="oppo">
+                <img src="img/logos/oppo.png" alt="" />
+                <div class="brand-start oppo">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- oppo end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- poco start here -->
+              <article class="sorting-by-brand" id="poco">
+                <img src="img/logos/poco-logo.png" alt="" />
+                <div class="brand-start poco">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- poco end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--MI start here  -->
+              <article class="sorting-by-brand" id="iqoo">
+                <img src="img/logos/iqoo.png" alt="" />
+                <div class="brand-start iqoo">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- iqoo end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- moto start here -->
+              <article class="sorting-by-brand" id="moto">
+                <img src="img/logos/motorola.png" alt="" />
+                <div class="brand-start moto">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- moto end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--google start here  -->
+              <article class="sorting-by-brand" id="google">
+                <img src="img/logos/google.png" alt="" />
+                <div class="brand-start google">
+                  <!-- phones here -->
+                  <!-- <div class="phone">
+                    <div class="image">
+                      <img src="img/BRANDS/google/Pixel 4a 5g.png" alt="" />
+                      <a
+                        href="./specs page/Android/HTML/pixel-4a.html"
+                        class="text"
+                      >
+                        Pixel 4a 5G
+                      </a>
+                    </div>
+                  </div> -->
+                </div>
+              </article>
+              <!--google end here  -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--sony start here  -->
+              <!-- <article class="sorting-by-brand" id="sony">
+                <img src="img/logos/sony.png" alt="" />
+                <div class="brand-start sony"> -->
+
+              <!-- </div>
+              </article> -->
+              <!-- sony end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--lg start here  -->
+              <article class="sorting-by-brand" id="lg">
+                <img src="img/logos/lg.png" alt="" />
+                <div class="brand-start lg">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- lg end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--micomax start here  -->
+              <article class="sorting-by-brand" id="micromax">
+                <img src="img/logos/micromax.png" alt="" />
+                <div class="brand-start micromax">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!--micromax end here  -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!--honor start here  -->
+              <article class="sorting-by-brand" id="honor">
+                <img src="img/logos/honor.png" alt="" />
+                <div class="brand-start honor">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!--honor end here  -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- infinix start here -->
+              <article class="sorting-by-brand" id="infinix">
+                <img src="img/logos/infinix.png" alt="" />
+                <div class="brand-start infinix">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- infinix end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- tecno start here -->
+              <article class="sorting-by-brand" id="tecno">
+                <img src="img/logos/tecno.png" alt="" />
+                <div class="brand-start tecno">
+                  <!-- phones here -->
+                </div>
+              </article>
+              <!-- tecno end here -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+              <!-- -------------------------------------------------------------------------------- -->
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var panel = document.querySelector("#side-bar-cum-panel");
+      var categoryOption = document.getElementById("optionofcategory");
+      var optionsOfCategoryOption = document.querySelectorAll(
+        "#optionofcategory a"
+      );
+      var priceOption = document.getElementById("optionofprice");
+      var optionsOfPriceOption = document.querySelectorAll("#optionofprice a");
+      var OsOption = document.getElementById("optionofOS");
+      var optionsOfOsOption = document.querySelectorAll("#optionofOS a");
+      var brandOption = document.getElementById("optionofbrand");
+      var optionsOfBrandOption = document.querySelectorAll("#optionofbrand a");
+      function openmenu() {
+        categoryOption.classList.toggle("openhamburger");
+        optionsOfCategoryOption.forEach((option) => {
+          option.classList.toggle("shownavtext");
+        });
+        priceOption.classList.toggle("openhamburger");
+        optionsOfPriceOption.forEach((option) => {
+          option.classList.toggle("shownavtext");
+        });
+        OsOption.classList.toggle("openhamburger");
+        optionsOfOsOption.forEach((option) => {
+          option.classList.toggle("shownavtext");
+        });
+        brandOption.classList.toggle("openhamburger");
+        optionsOfBrandOption.forEach((option) => {
+          option.classList.toggle("shownavtext");
+        });
+      }
+      function openview() {
+        panel.classList.add("open");
+        panel.classList.remove("close");
+        document.getElementById("view").style.visibility = "hidden";
+        document.getElementById("collapseview").style.visibility = "visible";
+      }
+      function closeview() {
+        panel.classList.add("close");
+        panel.classList.remove("open");
+        document.getElementById("view").style.visibility = "visible";
+        document.getElementById("collapseview").style.visibility = "hidden";
+      }
+    </script>
+    <!-- redirecting logic -->
+    <script type="text/javascript">
+      function homeclicked() {
+        var e = event || window.event;
+        console.log(e);
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = true;
+        }
+        window.history.back();
+        // location.replace(
+        //   "https://ayushsinghal23.github.io/A-Blogging-website-for-technical-and-mechanical-enthusiasts/"
+        // );
+      }
+      function isclicked(name) {
+        var e = event || window.event;
+        console.log(e);
+        if (e.preventDefault) {
+          e.preventDefault();
+        } else {
+          e.returnValue = true;
+        }
+
+        location.replace(document.getElementById(name).href);
+      }
+    </script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
+      integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var phones = {
+        // oneplus
+        "oneplus-7-pro": [32999, "flagship", "oneplus", "android"],
+        "oneplus-7t": [34999, "flagship", "oneplus", "android"],
+        "oneplus-7t-pro": [43999, "flagship", "oneplus", "android"],
+        "oneplus-8": [39999, "flagship", "oneplus", "android"],
+        "oneplus-8-pro": [54999, "flagship", "oneplus", "android"],
+        "oneplus-8t": [42999, "flagship", "oneplus", "android"],
+        "oneplus-nord": [24999, "mid-ranger", "oneplus", "android"],
+        // google
+        "google-pixel-4a": [24999, "mid-ranger", "google", "android"],
+        // oppo
+        "oppo-find-x2": [64990, "flagship", "oppo", "android"],
+        "oppo-reno-2f": [16990, "budget", "oppo", "android"],
+        "oppo-reno-3-pro": [25990, "mid-ranger", "oppo", "android"],
+        "oppo-reno-4-pro": [34990, "flagship", "oppo", "android"],
+        // mi
+        "mi-10": [50999, "flagship", "mi", "android"],
+        "redmi-9a": [7499, "budget", "mi", "android"],
+        "redmi-9": [8999, "budget", "mi", "android"],
+        "redmi-9-prime": [9999, "budget", "mi", "android"],
+        "redmi-note-9": [11999, "budget", "mi", "android"],
+        "redmi-note-9-pro": [13999, "budget", "mi", "android"],
+        "redmi-k20": [19800, "mid-ranger", "mi", "android"],
+        "redmi-k20-pro": [26999, "flagship", "mi", "android"],
+        "redmi-8a": [8990, "budget", "mi", "android"],
+        // realme
+        "realme-x3-superzoom": [23999, "flagship", "realme", "android"],
+        "realme-x50-pro": [41000, "flagship", "realme", "android"],
+        "realme-7": [14999, "budget", "realme", "android"],
+        "realme-7-pro": [19000, "budget", "realme", "android"],
+        "realme-7i": [11999, "budget", "realme", "android"],
+        "realme-narzo-10a": [11999, "budget", "realme", "android"],
+        "realme-narzo-10": [11999, "budget", "realme", "android"],
+        "realme-narzo-20a": [11999, "budget", "realme", "android"],
+        "realme-narzo-20": [11999, "budget", "realme", "android"],
+        "realme-narzo-20-pro": [11999, "budget", "realme", "android"],
+        // samsung
+        "samsung-s20-fe": [49999, "flagship", "samsung", "android"],
+        "samsung-m51": [24999, "mid-ranger", "samsung", "android"],
+        "samsung-m31s": [17499, "budget", "samsung", "android"],
+        "samsung-f41": [14499, "budget", "samsung", "android"],
+        "samsung-a21s": [14999, "budget", "samsung", "android"],
+        "samsung-a31": [19990, "mid-ranger", "samsung", "android"],
+        // lg
+        "lg-g8x": [54990, "flagship", "lg", "android"],
+        // poco
+        "poco-m2-pro": [10999, "budget", "poco", "android"],
+        "poco-x2": [16499, "budget", "poco", "android"],
+        "poco-x3": [16999, "budget", "poco", "android"],
+        // vivo
+        "vivo-x50-pro": [34990, "flagship", "vivo", "android"],
+        "vivo-v20": [24990, "mid-ranger", "vivo", "android"],
+        "vivo-z1-pro": [11999, "budget", "vivo", "android"],
+        "vivo-v17": [20999, "mid-ranger", "vivo", "android"],
+        "vivo-y50": [16500, "budget", "vivo", "android"],
+        // moto
+        "moto-edge+": [64999, "flagship", "moto", "android"],
+        "moto-one-fusion+": [16499, "budget", "moto", "android"],
+        // micromax
+        "micromax-in-note-1": [10999, "budget", "micromax", "android"],
+        // iqoo
+        "iqoo-3": [31990, "flagship", "iqoo", "android"],
+        // nokia
+        "nokia-5.3": [12499, "budget", "nokia", "android"],
+        //honor
+        "honor-9a": [11999, "budget", "honor", "android"],
+        "honor-9x": [14999, "budget", "honor", "android"],
+        // infinix
+        "infinix-hot-7": [9899, "budget", "infinix", "android"],
+        "infinix-hot-9": [8999, "budget", "infinix", "android"],
+        "infinix-hot-9-pro": [9499, "budget", "infinix", "android"],
+        "infinix-hot-10": [8999, "budget", "infinix", "android"],
+        //tecno
+        "tecno-spark-5-pro": [10499, "budget", "tecno", "android"],
+        "tecno-spark-6": [8499, "budget", "tecno", "android"],
+        //asus
+        "asus-rog-2": [39999, "flagship", "asus", "android"],
+        "asus-rog-3": [46999, "flagship", "asus", "android"],
+        // apple
+        "iphone-11": [54900, "flagship", "apple", "ios"],
+        // "iphone-11-pro": [79999, "flagship", "apple", "ios"],
+        // "iphone-11-pro-max": [117100, "flagship", "apple", "ios"],
+        // "iphone-12-mini": [69900, "flagship", "apple", "ios"],
+        "iphone-12": [79900, "flagship", "apple", "ios"],
+        "iphone-12-pro": [119900, "flagship", "apple", "ios"],
+        // "iphone-12-pro-max": [129900, "flagship", "apple", "ios"],
+        "iphone-xr": [38990, "flagship", "apple", "ios"],
+        // "iphone-xs": [69999, "flagship", "apple", "ios"],
+        "iphone-se": [32999, "flagship", "apple", "ios"],
+      };
+      var phoneName = Object.keys(phones);
+      phoneName.sort();
+      // console.log(phoneName);
+
+      for (var i = 0; i < phoneName.length; i++) {
+        var mainDiv = document.createElement("div");
+        mainDiv.classList.add("phone");
+        var subDiv = document.createElement("div");
+        subDiv.classList.add("image");
+        if (phones[phoneName[i]][3] == "android") {
+          subDiv.innerHTML =
+            '<img src="img/' +
+            phoneName[i] +
+            '.png" alt="" />\n<a href=./specspage/android/HTML/' +
+            phoneName[i] +
+            ".html" +
+            " target='_blank' class=\"text\">" +
+            phoneName[i].replaceAll("-", " ").toUpperCase() +
+            "</a>";
+          mainDiv.appendChild(subDiv);
+        } else if (phones[phoneName[i]][3] == "ios") {
+          subDiv.innerHTML =
+            '<img src="img/' +
+            phoneName[i] +
+            '.png" alt="" />\n<a href=./specspage/ios/HTML/' +
+            phoneName[i] +
+            ".html" +
+            ' target="_blank" class="text">' +
+            phoneName[i].replaceAll("-", " ").toUpperCase() +
+            "</a>";
+          mainDiv.appendChild(subDiv);
+        }
+        //  FOR CATEGORY START
+        if (phones[phoneName[i]][1] == "mid-ranger") {
+          midrange = document.querySelector(".mid-rangers");
+          midrange.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][1] == "flagship") {
+          flagship = document.querySelector(".flagships");
+          flagship.appendChild(mainDiv.cloneNode(true));
+        } else {
+          budget = document.querySelector(".budget");
+          budget.appendChild(mainDiv.cloneNode(true));
+        }
+        // FOR CATEGORY END
+
+        // FOR OS START
+        if (phones[phoneName[i]][3] == "android") {
+          androids = document.querySelector(".androids");
+          androids.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][3] == "ios") {
+          iphones = document.querySelector(".iphones");
+          iphones.appendChild(mainDiv.cloneNode(true));
+        }
+        // FOR OS END
+        // FOR BRAND START
+
+        if (phones[phoneName[i]][2] == "oppo") {
+          oppo = document.querySelector(".oppo");
+          oppo.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "oneplus") {
+          oneplus = document.querySelector(".oneplus");
+          oneplus.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "samsung") {
+          samsung = document.querySelector(".samsung");
+          samsung.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "apple") {
+          apple = document.querySelector(".apple");
+          apple.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "asus") {
+          asus = document.querySelector(".asus");
+          asus.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "mi") {
+          mi = document.querySelector(".mi");
+          mi.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "nokia") {
+          nokia = document.querySelector(".nokia");
+          nokia.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "vivo") {
+          vivo = document.querySelector(".vivo");
+          vivo.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "google") {
+          google = document.querySelector(".google");
+          google.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "iqoo") {
+          iqoo = document.querySelector(".iqoo");
+          iqoo.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "realme") {
+          realme = document.querySelector(".realme");
+          realme.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "moto") {
+          document.querySelector(".moto").appendChild(mainDiv);
+        } else if (phones[phoneName[i]][2] == "honor") {
+          honor = document.querySelector(".honor");
+          honor.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "micromax") {
+          micromax = document.querySelector(".micromax");
+          micromax.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "poco") {
+          poco = document.querySelector(".poco");
+          poco.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "infinix") {
+          infinix = document.querySelector(".infinix");
+          infinix.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "lg") {
+          lg = document.querySelector(".lg");
+          lg.appendChild(mainDiv.cloneNode(true));
+        } else if (phones[phoneName[i]][2] == "tecno") {
+          tecno = document.querySelector(".tecno");
+          tecno.appendChild(mainDiv.cloneNode(true));
+        }
+        // FOR BRAND END
+      }
+      // ------------------------------------------------------------------------------------------------------
+      // ------------------------------------------------------------------------------------------------------
+      // sorting by price start
+      var sortByPrice = [];
+      function sortingByPrice() {
+        for (var p in phones) {
+          sortByPrice.push([p, phones[p][0]]);
+        }
+        sortByPrice.sort(function (a, b) {
+          return b[1] - a[1];
+        });
+      }
+      sortingByPrice();
+      for (var i = 0; i < sortByPrice.length; i++) {
+        var mainDiv = document.createElement("div");
+        mainDiv.classList.add("phone");
+        var subDiv = document.createElement("div");
+        subDiv.classList.add("image");
+        if (phones[sortByPrice[i][0]][3] == "android") {
+          subDiv.innerHTML =
+            '<img src="img/' +
+            sortByPrice[i][0] +
+            '.png" alt="" />\n<a href=./specspage/android/HTML/' +
+            sortByPrice[i][0] +
+            ".html" +
+            " target='blank' class=\"text\">" +
+            sortByPrice[i][0].replaceAll("-", " ").toUpperCase() +
+            "</a>";
+          mainDiv.appendChild(subDiv);
+        } else {
+          subDiv.innerHTML =
+            '<img src="img/' +
+            sortByPrice[i][0] +
+            '.png" alt="" />\n<a href=./specspage/ios/HTML/' +
+            sortByPrice[i][0] +
+            ".html" +
+            ' class="text">' +
+            sortByPrice[i][0].replaceAll("-", " ").toUpperCase() +
+            "</a>";
+          mainDiv.appendChild(subDiv);
+        }
+        //  FOR CATEGORY START
+        if (sortByPrice[i][1] >= 40000) {
+          // console.log(document.querySelector(".above-40k"));
+          above40k = document.querySelector(".above-40k");
+          above40k.appendChild(mainDiv.cloneNode(true));
+        } else if (sortByPrice[i][1] >= 30000) {
+          above30k = document.querySelector(".above-30k");
+          above30k.appendChild(mainDiv.cloneNode(true));
+        } else if (sortByPrice[i][1] >= 20000) {
+          above20k = document.querySelector(".above-20k");
+          above20k.appendChild(mainDiv.cloneNode(true));
+        } else if (sortByPrice[i][1] >= 15000) {
+          above15k = document.querySelector(".above-15k");
+          above15k.appendChild(mainDiv.cloneNode(true));
+        } else if (sortByPrice[i][1] >= 10000) {
+          above10k = document.querySelector(".above-10k");
+          above10k.appendChild(mainDiv.cloneNode(true));
+        } else {
+          above5k = document.querySelector(".above-5k");
+          above5k.appendChild(mainDiv.cloneNode(true));
+        }
+      }
+      // sorting by price end
+    </script>
+  </body>
+</html>
